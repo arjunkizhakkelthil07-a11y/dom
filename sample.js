@@ -1,0 +1,22 @@
+function submitjj(){
+document.getElementById("mmm");
+}
+function changecontent(){
+    document.getElementById("example").innerHTML="<strong>this is changed using innerHTML!</strong>";
+}
+// function changecolor(){
+//     try{
+//         const element=document.getElementById("myDiv");
+//         if(!element){
+//             throw new Error("element not found");
+
+//         }
+//         element.style.backgroundColor="lightblue";
+
+//     }catch(error){
+//         console.error("Error changing background:", error.message);
+//     }
+// }
+function changecolor(){
+    document.getElementById("body").style.backgroundColor="lightblue";
+}
