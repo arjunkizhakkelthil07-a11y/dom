@@ -23,18 +23,64 @@ function changecolor(){
 document.getElementById("try").addEventListener("click", function () {
         document.getElementById("text").innerText = "its me arjyoh";
     });
+// function validateForm() {
+//     let name = document.getElementById("name").value;
+//     let email = document.getElementById("email").value;
+//     let error = document.getElementById("error");
+//     error.innerText = "";
+//     if (name === "") {
+//     error.innerText = "Name is required";
+//     return false;
+//     }
+//     if (!email.includes("@")) {
+//     error.innerText = "Enter a valid email";
+//     return false;
+//     }
+
+//     alert("Form submitted successfully!");
+//     return true;
+// }
 function validateForm() {
-    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let error = document.getElementById("error");
     error.innerText = "";
-    if (name === "") {
-    error.innerText = "Name is required";
-    return false;
+    let password = document.getElementById("password").value;
+    const message = document.getElementById("message");
+    const minLength = 6;
+    if (password.length < minLength) {
+        message.textContent = "Password must be at least 6 characters long.";
+        message.className = "error";
     }
     if (!email.includes("@")) {
     error.innerText = "Enter a valid email";
     return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+     
+}
+function validateForm() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let error = document.getElementById("error");
+    let message = document.getElementById("message");
+
+    error.innerText = "";
+    message.innerText = "";
+
+    const minLength = 6;
+
+    if (password.length < minLength) {
+        message.textContent = "Password must be at least 6 characters long.";
+        message.className = "error";
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        error.innerText = "Enter a valid email";
+        return false;
     }
 
     alert("Form submitted successfully!");

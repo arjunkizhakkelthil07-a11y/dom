@@ -43,14 +43,22 @@
   </div> -->
 </form>
 <script src="sample.js"></script>
-<form onsubmit="return validateForm()">
+<!-- <form onsubmit="return validateForm()">
     Name: <input type="text" id="name"><br><br>
     Email: <input type="text" id="email"><br><br>
     <button type="submit">Submit</button>
 </form>
 
-  <p id="error" style="color:rgb(207, 185, 185);"></p>
-  
+  <p id="error" style="color:rgb(207, 185, 185);"></p> -->
+
+  <form onsubmit="return validateForm()">
+      Email: <input type="text" id="email"><br><br>
+      Password: <input type="password" id="password"><br><br>
+      <button type="submit">Submit</button>
+  </form>
+
+  <p id="error" style="color:rgb(243, 237, 237);"></p>
+  <p id="message" style="color:rgb(220, 215, 215);"></p>
 
 </body>
 </html>
