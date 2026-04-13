@@ -23,3 +23,20 @@ function changecolor(){
 document.getElementById("try").addEventListener("click", function () {
         document.getElementById("text").innerText = "its me arjyoh";
     });
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let error = document.getElementById("error");
+    error.innerText = "";
+    if (name === "") {
+    error.innerText = "Name is required";
+    return false;
+    }
+    if (!email.includes("@")) {
+    error.innerText = "Enter a valid email";
+    return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
